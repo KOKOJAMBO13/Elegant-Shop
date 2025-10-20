@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.card {
+  background-color: #0b0b0b;
+  width: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* твоё изображение */
+.image {
+  background: url('./КОстюим.jpg') no-repeat center/cover;
+  height: 450px;
+}
+
+.content {
+  padding: 30px 20px;
+}
+
+.logo {
+  font-size: 36px;
+  color: #d57b42;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: #d57b42;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #b8642e;
+  transform: translateY(-2px);
+}
+
+/* Fade overlay */
+.fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+  z-index: 9999;
+}
+
+/* Keyframe animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
